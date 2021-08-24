@@ -1,6 +1,7 @@
 package com.example.sqlitedatabase;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -23,6 +24,14 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }catch (Exception e){
             return false;
+        }
+    }
+
+    Cursor select(String sql){
+        try {
+            return db.rawQuery(sql,null);
+        } catch (Exception e){
+            return null;
         }
     }
 
