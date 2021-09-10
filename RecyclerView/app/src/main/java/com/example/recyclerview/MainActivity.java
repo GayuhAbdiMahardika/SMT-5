@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         siswaList.add(new Siswa("Thor it Fly", "Sidoarjo"));
         siswaList.add(new Siswa("SoloPlayer", "Sidoarjo"));
 
-        adapter = new SiswaAdapter(this, siswaList);
+        adapter = new SiswaAdapter(MainActivity.this, siswaList);
         recyclerView.setAdapter(adapter);
     }
 
